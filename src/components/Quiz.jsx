@@ -31,7 +31,7 @@ const Quiz = () => {
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
         } else {
-            navigate('/results', { state: { questions, answers } });
+          navigate('/results', { state: { questions, answers: { ...answers, [currentQuestion]: answer } } });
         }
     };
 
