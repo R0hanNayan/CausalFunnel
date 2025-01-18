@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Quiz from './components/Quiz';
+import Results from './components/Results';
+import Wrapper from './utils/Wrapper';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Wrapper child={<Login />} />} />
+      <Route path="/quiz" element={<Wrapper child={<Quiz />} />} />
+      <Route path="/results" element={<Wrapper child={<Results />} />} />
+    </Routes>
+  </Router>
+);
 
 export default App;

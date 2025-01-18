@@ -1,0 +1,11 @@
+.container-wrap {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2em;
+    border-radius: 1rem ;
+    background: linear-gradient(135deg, #00c6ff, #ff66cc);
+}
